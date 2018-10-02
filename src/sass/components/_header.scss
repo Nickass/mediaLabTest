@@ -1,0 +1,27 @@
+.header {
+  position: relative;
+  z-index: 1;
+  background: rgba(#000, 0.7);
+  height: 80px;
+  padding: 15px 0;
+  color: #fff;
+  z-index: 20;
+
+
+  &__logo {
+    width: 50%;
+    float: left;
+    @media screen and (max-width: 991px) {
+      width: auto;
+    }
+  }
+  &__menu {
+    width: 50%;
+    float: left;
+    @media screen and (max-width: 991px) {
+      float: right;
+      width: auto;
+      padding: 5px 0;
+    }
+  }
+}

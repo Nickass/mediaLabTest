@@ -1,0 +1,40 @@
+.f-left{ float: left; }
+.f-right{ float: right; }
+
+.d-b { display: block; min-width: 100%; }
+.d-n { display: none; }
+
+.va-middle{ vertical-align: middle; }
+.ta-center{ text-align: center; }
+.ta-left{ text-align: left; }
+.ta-right{ text-align: right; }
+
+.main-color { color: $main-color; }
+.primary-color { color: $primary-color; }
+
+.fz-xl { font-size: $em-base + 14; }
+.fz-lg { font-size: $em-base + 10; }
+.fz-md { font-size: $em-base + 4; }
+.fz-sm { font-size: $em-base; }
+.fz-xs { font-size: $em-base - 2; }
+
+.reset-list{ @include reset-list; }
+.clearfix{ @include clearfix; }
+.container{ @include container; }
+
+.input-number {
+  @include reset-input;
+  width: 45px;
+  display: inline-block;
+  border: 1px solid #5b6e7b;
+  background: transparent;
+  border-radius: 9px;
+  height: 28px;
+  text-align: center;
+  -moz-appearance:textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+}

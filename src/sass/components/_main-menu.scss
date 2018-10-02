@@ -1,0 +1,101 @@
+.main-menu {
+  @include reset-list;
+  font-size: 0;
+  
+  @media screen and (max-width: 991px) {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 100%;
+    background: rgba(#000, .75);
+    text-align: center;
+  }
+
+  &__toggler {
+    @include reset-button;
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    @media screen and (min-width: 992px) {
+      display: none;
+    }
+
+    &:focus { outline: none; }
+
+    span {
+      position: absolute;
+      transition: bottom 600ms;
+      width: 100%;
+      display: block;
+      height: 2px;
+      background-color: #fff;
+      border-radius: 5px;
+      &:nth-child(1) {bottom: 7px;}
+      &:nth-child(2) {bottom: 14px;}
+      &:nth-child(3) {top: 7px;}
+    }
+
+    &.active {
+      span {
+        transition: transform 600ms;
+        bottom: 50%;
+        left: 0;
+        width: 100%;
+        transform-origin: 50%;
+      }
+      span:last-child {display: none; }
+      span:first-child {
+        transform: rotate(45deg);
+      }
+      span:nth-child(2) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    font-size: $em-base + 2px;
+    @media screen and (max-width: 991px) {
+      display: block;
+      position: relative;
+    }
+  }
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit; 
+    padding: 15px 12px;
+
+    &:hover, &.active {
+      color: $primary-color;
+    }
+  }
+  &__submenu { 
+    @include clearfix;
+    position: absolute;
+    top: 100%;
+    display: none;
+    background: rgba(#000, .65);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 10;
+    @media screen and (max-width: 991px) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @media screen and (max-width: 560px) {
+      width: 100%;
+    }
+
+  }
+
+  &__col {
+    float: left;
+    width: 50%;
+    min-width: 270/2 + px;
+  }
+}

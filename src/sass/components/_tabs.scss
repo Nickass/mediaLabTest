@@ -1,0 +1,53 @@
+.tabs {
+  &__nav {
+    @include reset-list;
+    font-size: 0;
+    text-align: center;
+  }
+  &__item {
+    font-size: $em-base;
+    width: 25%;
+    display: inline-block;
+    @media screen and (max-width: 560px) {
+      width: 50%;
+    }
+  }
+  &__link {
+    display: block;
+    background: $main-color;
+    padding: 15px;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 700;
+    text-transform: uppercase;
+    fill: $primary-color;
+    line-height: 1;
+
+    @media screen and (max-width: 560px) {
+      font-size: 0;
+      text-align: center;
+    }
+
+    &:hover, &.tabs__link--active {
+      background: $primary-color;
+      color: #000;
+      fill: #000;
+    }
+  }
+  &__icon {
+    display: inline-block;
+    width: 15px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+    @media screen and (max-width: 560px) {
+      margin: 0;
+    }
+
+  }
+  &__page {
+    padding: 15px 0;
+    display: none;
+    &--open {display: block;}
+  }
+}

@@ -1,0 +1,122 @@
+mixin home
+  main.home
+    .container
+      .tabs
+        ul.tabs__nav
+          li.tabs__item
+            a(href="#lodging").tabs__link.tabs__link--active
+              +icon('house').tabs__icon
+              | Жилье
+          li.tabs__item
+            a(href="#tours").tabs__link 
+              +icon('lounge').tabs__icon
+              | Туры
+        .tabs__page#lodging.tabs__page--open
+            .lodging
+              .lodging__col
+                .select__container
+                  +icon('calendar').select__icon
+                  select.select
+                    option Интервал дат начала тура
+                    option 20.05 - 20.06
+                    option 23.06 - 2.08
+                    option 10.10 - 31.11
+              .lodging__col
+                .range-slider
+                  .range-slider__desc GEL
+                  .range-slider__min
+                    input(type="number",value="0").input-number
+                  input(type="range",data-type="double",data-extra-classes="range-slider__range",data-hide-min-max,data-from="1",data-to="2700",data-max="3000").range
+                  .range-slider__max
+                    input(type="text",value="3000+").input-number
+            .lodging
+              a(href="#lodging-options").lodging__dd-toggler Расширенный поиск
+            .lodging#lodging-options
+              .lodging__col
+                .box
+                  h3.box__title Тип тура
+                  .box__col
+                    label.box__item
+                      label.checkbox
+                        input(type="checkbox").checkbox__input
+                        +icon('check').checkbox__icon
+                      | Все
+                    label.box__item
+                      label.checkbox
+                        input(type="checkbox").checkbox__input
+                        +icon('check').checkbox__icon
+                      | Пляжный
+                    label.box__item
+                      label.checkbox
+                        input(type="checkbox").checkbox__input
+                        +icon('check').checkbox__icon
+                      | горно-лыжные
+                    label.box__item
+                      label.checkbox
+                        input(type="checkbox").checkbox__input
+                        +icon('check').checkbox__icon
+                      | Лечебные
+                    label.box__item
+                      label.checkbox
+                        input(type="checkbox").checkbox__input
+                        +icon('check').checkbox__icon
+                      | Свадебные
+                  .box__col
+                    label.box__item
+                      label.checkbox
+                        input(type="checkbox").checkbox__input
+                        +icon('check').checkbox__icon
+                      | Экстркемальные
+                    label.box__item
+                      label.checkbox
+                        input(type="checkbox").checkbox__input
+                        +icon('check').checkbox__icon
+                      | Гастрономические
+                    label.box__item
+                      label.checkbox
+                        input(type="checkbox").checkbox__input
+                        +icon('check').checkbox__icon
+                      | Экскурсионные
+                    label.box__item
+                      label.checkbox
+                        input(type="checkbox").checkbox__input
+                        +icon('check').checkbox__icon
+                      | Паломничиские
+              .lodging__col
+                .box
+                  h3.box__title Питание
+                  .box__col
+                    label.box__item
+                      label.checkbox
+                        input(type="checkbox").checkbox__input
+                        +icon('check').checkbox__icon
+                      | Не включено
+                    label.box__item
+                      label.checkbox
+                        input(type="checkbox").checkbox__input
+                        +icon('check').checkbox__icon
+                      | <span class="box__accent">ВВ</span> - Только завтрак
+                    label.box__item
+                      label.checkbox
+                        input(type="checkbox").checkbox__input
+                        +icon('check').checkbox__icon
+                      | <span class="box__accent">НВ</span> - Завтрак и Ужин
+                  .box__col
+                    label.box__item
+                      label.checkbox
+                        input(type="checkbox").checkbox__input
+                        +icon('check').checkbox__icon
+                      | <span class="box__accent">FВ</span> - Полный пансион
+                    label.box__item
+                      label.checkbox
+                        input(type="checkbox").checkbox__input
+                        +icon('check').checkbox__icon
+                      | <span class="box__accent">AI</span> - Все включено
+                    label.box__item
+                      label.checkbox
+                        input(type="checkbox").checkbox__input
+                        +icon('check').checkbox__icon
+                      | <span class="box__accent">UAI</span> - Ультра Все
+
+        .tabs__page#tours  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad optio nam reiciendis molestias et incidunt illo, perspiciatis nemo laudantium perferendis vero reprehenderit, impedit labore beatae exercitationem cupiditate, sit tempore nisi.
+          

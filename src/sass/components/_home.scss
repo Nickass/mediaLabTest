@@ -1,0 +1,9 @@
+.home {
+  position: relative;
+  top: -80px;
+  padding-top: 100px;
+  background: #777 url('../images/bg-home.png') 50% 50% no-repeat;
+  background-size: cover;
+  color: #fff;
+  @media screen and (min-width: 992px) { padding-top: 240px; height: 940px; }
+}

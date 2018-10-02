@@ -1,0 +1,60 @@
+* { box-sizing: border-box; }
+html{
+  font-size: $em-base/16px * $site-scaller * 100 + %;
+}
+body{
+  margin: 0;
+  padding: 0;
+  color: $dark;
+  background-color: $light;
+  font-family: $main-font, sans-serif;
+  font-weight: 400;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $gray;
+  margin: 1em 0;
+  padding: 0;
+}
+a:hover{ text-decoration: none; }
+img {
+  max-width: 100%;
+  height: auto;
+}
+svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+textarea {
+  height: rem(80px);
+  resize: vertical;
+}
+
+address{ font-style: normal; }
+select:invalid{ color: lighten($gray, 15%); }
+::placeholder{ color: lighten($gray, 15%); }
+
+
+[type="text"],
+[type="tel"],
+[type="email"],
+[type="search"],
+[type="url"],
+[type="date"],
+[type="password"],
+[type="time"],
+[type="number"],
+[type="file"],
+select,
+textarea{
+  box-sizing: border-box;
+  border: 1px solid $gray;
+  padding: 0 10px;   
+
+  &:focus{
+    outline: none;
+    box-shadow:inset 0px 0px 3px $gray;
+  }
+}

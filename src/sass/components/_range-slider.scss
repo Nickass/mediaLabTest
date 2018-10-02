@@ -1,0 +1,59 @@
+.range-slider {
+  @include clearfix;
+  position: relative;
+  background: rgba($main-color, 0.75);
+  border-radius: 25px;
+  padding: 11px 5px 11px 20px;
+  text-transform: uppercase;
+  height: 50px;
+
+  @media screen and (max-width: 991px) {
+
+  }
+  
+  &__desc {
+    float: left;
+    width: 5%;
+    line-height: 28px;
+  }
+  &__min {
+    float: left;
+    display: block;
+    width: 25%;
+    text-align: center;
+    line-height: 28px;
+  }
+  &__max {
+    float: left;
+    display: block;
+    width: 20%;
+    text-align: right;
+  }
+  &__range {
+    display: block;
+    float: left;
+    width: 50%;
+    margin: 14px 0;
+  }
+
+
+  .irs-line {
+    height: 2px;
+    background: #fff;
+  }
+  .irs-bar {
+    top: 0px;
+    height: 2px;
+    background: $primary-color;
+  }
+  .irs-from, .irs-to {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: $primary-color;
+    font-size: 0;
+    top: -7px;
+    cursor: pointer;
+  }
+}

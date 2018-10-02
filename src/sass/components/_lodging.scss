@@ -1,0 +1,35 @@
+.lodging {
+  @include clearfix;
+  margin-bottom: 20px;
+  
+  &__col {
+    width: 50%;
+    float: left; 
+    &:first-child {
+      padding-right: 15px;
+    }
+    &:last-child {
+      padding-left: 15px;
+    }
+    @media screen and (max-width: 991px) {
+      width: auto;
+      float: none;
+      margin-bottom: 15px;
+      &:first-child, &:last-child { padding: 0; }
+    }
+  }
+  &__dd-toggler {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+
+    &:before {
+      content: '\00BB';
+      display: inline-block;
+      transform: rotate(90deg);
+      font-size: 22px;
+      position: relative;
+      top: 4px;
+    }
+  }
+}

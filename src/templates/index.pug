@@ -1,0 +1,22 @@
+include mixins/icon
+include mixins/header
+include mixins/home
+
+html
+  head
+    meta(http-equiv="Content-Type",content="text/html; charset=UTF-8")
+    meta(name="viewport",content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+    meta(http-equiv="X-UA-Compatible",content="IE=edge")
+    link(rel="stylesheet" type="text/css" href="./css/ion.rangeSlider.css")
+    link(rel="stylesheet" type="text/css" href="./css/style.css")
+
+  body
+    +header
+    +home
+
+    script(src="scripts/jquery-1.9.1.js")
+    script(src="scripts/jquery.nice-select.min.js")
+    script(src="scripts/ion.rangeSlider.min.js")
+    script(src="scripts/svg4everybody.min.js")
+    script(src="scripts/main.js")
+    script svg4everybody();

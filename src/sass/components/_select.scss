@@ -1,0 +1,67 @@
+.select {
+  position: relative;
+  background: rgba($main-color, 0.75);
+  border-radius: 25px;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    box-shadow: inset 0 0 2px #ddd;
+  }
+
+  &__container {
+    position: relative;
+
+  }
+  &__icon {
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    fill: $primary-color;
+    z-index: 1;
+  }
+  
+  &.open .current:after { transform: rotate(225deg); }
+  .current {
+    padding-left: 30px;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      margin-top: -2.5px;
+      width: 5px;
+      height: 5px;
+      border-color: inherit;
+      border-style: solid;
+      border-width: 1px;
+      border-top-width: 0;
+      border-left-width: 0;
+      transform: rotate(45deg);
+      transition: 200ms;
+    }
+  }
+
+  &.open .list { display: block; }
+  .list {
+    @include reset-list;
+    display: none;
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 100%;
+    background: #fff;
+    color: #000;
+    z-index: 15;
+  }
+  .option {
+    padding: 5px 10px;
+    border-bottom: 1px solid #eee;
+    &:last-child {border-bottom: none;}
+  }
+}

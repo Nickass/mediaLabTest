@@ -1,0 +1,54 @@
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    list-style: none;
+    list-style-position: outside;
+}
+
+@mixin clearfix {
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin blocks-justify {
+    text-align: justify;
+    text-justify: newspaper;
+}
+
+@mixin reset-button{
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    display: inline-block;
+    background-color: transparent;
+    text-decoration: none;
+    color: inherit;
+}
+
+@mixin reset-input{
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    display: inline-block;  
+}
+@mixin clearfix {
+  &:before, &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+@mixin container {
+  @include clearfix;
+  max-width: $site-max-width;
+  margin: 0 auto;
+  padding: 0 $pd-container;
+}

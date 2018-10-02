@@ -1,0 +1,44 @@
+.box {
+  @include clearfix;
+  background: rgba($main-color, .75);
+  padding: 10px 25px;
+  border-radius: 10px;
+  color: #fff;
+
+
+  &__title {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0 -25px;
+    padding: 10px 25px;
+    border-color: inherit;
+    border-bottom: 1px solid;
+  }
+
+  &__col {
+    width: 50%;
+    float: left;
+    &:first-child {
+      padding-right: 15px;
+    }
+    &:last-child {
+      padding-left: 15px;
+    }
+    @media screen and (max-width: 560px) {
+      width: auto;
+      float: none;
+      &:first-child, &:last-child { padding: 0; }
+    }
+  }
+
+  &__item {
+    display: block;
+    margin: 18px 0;
+    text-transform: uppercase;
+  }
+
+  &__accent {
+    color: $primary-color;
+  }
+}

@@ -1,0 +1,42 @@
+mixin header
+  header.header
+    .container
+      .header__logo
+        img(src="images/logo.png",alt="Soddy georgia logo")
+      nav.header__menu
+        button(role="hidden", type="button",data-target="#main-menu").main-menu__toggler.dd-toggler
+          span
+          span
+          span
+        ul.main-menu#main-menu
+          li.main-menu__item
+            a(href="#").main-menu__link Главная
+          li.main-menu__item
+            a(href="#menu-direction").main-menu__link.dd-toggler Направления
+            .main-menu__submenu#menu-direction
+              .main-menu__col
+                h4.menu__title Море
+                ul.menu
+                  li.menu__item
+                    a(href="#").menu__link Анаклия
+                  li.menu__item
+                    a(href="#").menu__link Батуми
+                  li.menu__item
+                    a(href="#").menu__link Гонио
+                  li.menu__item
+                    a(href="#").menu__link Квариати
+              .main-menu__col
+                h4.menu__title Горы
+                ul.menu
+                  li.menu__item
+                    a(href="#").menu__link Бакуриани
+                  li.menu__item
+                    a(href="#").menu__link Боржоми
+                  li.menu__item
+                    a(href="#").menu__link Годердзи
+                  li.menu__item
+                    a(href="#").menu__link Гудаури
+          li.main-menu__item
+            a(href="#").main-menu__link Страховка
+          li.main-menu__item
+            a(href="#").main-menu__link Авиа
